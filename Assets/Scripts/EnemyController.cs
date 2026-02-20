@@ -3,20 +3,20 @@ using UnityEngine.AI;
 
 public class EnemyController : MonoBehaviour
 {
-    //public GameObject player;
-    //private NavMeshAgent navMeshAgent;
+    public GameObject player;
+    private NavMeshAgent navMeshAgent;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        //navMeshAgent = GetComponent<NavMeshAgent>();
+        navMeshAgent = GetComponent<NavMeshAgent>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        //if (player != null)
-        //{
-        //    navMeshAgent.setDestination(player.transform.position);
-        //}
+        if (player != null)
+        {
+           navMeshAgent.SetDestination(player.transform.position);
+        }
     }
 }
